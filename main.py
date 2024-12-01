@@ -29,16 +29,6 @@ def create_user(user: CreateUser):
     }
 
 
-@app.post("/calc/add/")
-def add(a: int, b: int):
-    return {
-        "a": a,
-        "b": b,
-        "result": a + b,
-    }
-
-
-
 @app.get("/items/")
 def list_items():
     return [
@@ -46,6 +36,8 @@ def list_items():
         "Items2",
         "Items3"
     ]
+
+
 @app.get("/items/latest/")
 def get_latest_items():
     return {"item": {"id": "0", "name": "latest"}}
